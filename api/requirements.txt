@@ -1,0 +1,11 @@
+colorama==0.4.4
+Flask==2.0.1
+gp-hashing==1.0.4
+itsdangerous==2.0.1
+Jinja2==3.0.1
+MarkupSafe==2.0.1
+uuid==1.30
+Werkzeug==2.0.1
+gunicorn
+requests
+Flask-SQLAlchemy
