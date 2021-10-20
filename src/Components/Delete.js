@@ -1,5 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router";
+import styles from "../css_modules/show.module.css";
+
 export const Delete=({id})=>{
     const history=useHistory()
     const deleteHandler=()=>{
@@ -17,6 +19,6 @@ export const Delete=({id})=>{
         })
     }
     return (
-        <button onClick={deleteHandler}>Delete</button>
+        <button className={styles.custmBtn} role="button" onClick={deleteHandler}>Delete</button>
     )
 }
