@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router";
+import styles from "../css_modules/edit.module.css";
+
 export const Edit = () => {
   const history = useHistory();
   const { id } = useParams();
@@ -31,9 +33,13 @@ export const Edit = () => {
     history.push(`/${id}`);
   };
   return (
-    <form onSubmit={submitHandler}>
-      <input type="text" value={todo} onChange={editHandler} required />
-      <button type="submit">Submit</button>
-    </form>
+    <div className={styles.container}>
+      <div className={styles.item}>
+        <form onSubmit={submitHandler}>
+          <input id={styles.custmInput} type="text" value={todo} onChange={editHandler} required />
+          <button id={styles.editBtn} type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
   );
 };
