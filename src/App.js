@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { TodoPage } from "./Pages/TodoPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -9,15 +8,9 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/">
-            <TodoPage />
-          </Route>
-          <Route exact path="/:id">
-            <Show />
-          </Route>
-          <Route path="/edit/:id">
-            <Edit />
-          </Route>
+          <Route exact path="/" component={TodoPage}></Route>
+          <Route exact path="/:id" component={Show}></Route>
+          <Route path="/edit/:id" component={Edit}></Route>
         </Switch>
       </Router>
     </div>
